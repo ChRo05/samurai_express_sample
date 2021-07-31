@@ -14,6 +14,19 @@
         <div>
             <%= count %>
         </div>
+
+        <h1>Request Body</h1>
+        <div>
+            <h2>body[address]</h2>
+            <div>
+                <%= address %>
+            </div>
+            <form action="/" method="POST" enctype="application/x-www-form-urlencoded">
+                <label for="address">住所</label>
+                <input type="text" name="address">
+                <input type="submit" value="送信">
+            </form>
+        </div>
     </body>
 
 </html>
