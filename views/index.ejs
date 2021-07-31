@@ -11,7 +11,8 @@
             <ul>
                 <% for(todo of todoList){ %>
                     <li>
-                        <%= todo %>
+                        <%= todo.todo %>
+                            <%= dateformat(todo.created, "yyyy-mm-dd HH:MM" ) %>
                     </li>
                     <% } %>
             </ul>
