@@ -11,8 +11,9 @@
             <ul>
                 <% for(todo of todoList){ %>
                     <li>
-                        <%= todo.todo %>
-                            <%= dateformat(todo.created, "yyyy-mm-dd HH:MM" ) %>
+                        (<%= todo.id %>)
+                            <%= todo.todo %>
+                                <%= dateformat(todo.created, "yyyy-mm-dd HH:MM" ) %>
                     </li>
                     <% } %>
             </ul>
@@ -22,6 +23,13 @@
                 <label for="todo">TODO</label>
                 <input type="text" name="todo">
                 <input type="submit" value="登録">
+            </form>
+        </div>
+        <div>
+            <form action="/delete" method="POST" enctype="application/x-www-form-urlencoded">
+                <label for="id">削除するTODOのID</label>
+                <input type="text" name="id">
+                <input type="submit" value="削除">
             </form>
         </div>
     </body>
