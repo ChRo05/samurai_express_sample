@@ -6,7 +6,23 @@
     </head>
 
     <body>
-        <h1>Hello World</h1>
+        <h1>TODO LIST</h1>
+        <div>
+            <ul>
+                <% for(todo of todoList){ %>
+                    <li>
+                        <%= todo %>
+                    </li>
+                    <% } %>
+            </ul>
+        </div>
+        <div>
+            <form action="/" method="POST" enctype="application/x-www-form-urlencoded">
+                <label for="todo">TODO</label>
+                <input type="text" name="todo">
+                <input type="submit" value="登録">
+            </form>
+        </div>
     </body>
 
 </html>
